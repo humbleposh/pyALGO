@@ -7,8 +7,10 @@ from pyESN import ESN
 import matplotlib.pyplot as plt
 
 #read the open, high, low and closing price from the csv files
-o, h, l, c=np.loadtxt('C:/AAA-TEMP/PyALGO/GBPUSD1H-20160401-20170331.csv', delimiter=',',
+o, h, l, c=np.loadtxt('C:/AAA-TEMP/PyALGO/GBPUSD60.csv', delimiter=',',
                       usecols=(2,3,4,5), unpack=True)
+# o, h, l, c=np.loadtxt('C:/AAA-TEMP/PyALGO/GBPUSD1H-20160401-20170331.csv', delimiter=',',
+#                      usecols=(2,3,4,5), unpack=True)
 
 ##build an Echo State Network
 esn = ESN(n_inputs = 1,
